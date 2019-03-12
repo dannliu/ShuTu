@@ -21,7 +21,7 @@
 
 /* Begin PBXFileReference section */
 		D46E4C252223730F00109A5B /* STSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STSearchBarViewController.swift; sourceTree = "<group>"; };
-		D4C92885216C7D4B00D0441D /* STKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4C92885216C7D4B00D0441D /* ShuTu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShuTu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C92888216C7D4B00D0441D /* STKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKit.h; sourceTree = "<group>"; };
 		D4C92889216C7D4B00D0441D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C92891216C7D6700D0441D /* STExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STExtensions.swift; sourceTree = "<group>"; };
@@ -57,7 +57,7 @@
 		D4C92886216C7D4B00D0441D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4C92885216C7D4B00D0441D /* STKit.framework */,
+				D4C92885216C7D4B00D0441D /* ShuTu.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,9 +101,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D4C92884216C7D4B00D0441D /* STKit */ = {
+		D4C92884216C7D4B00D0441D /* ShuTu */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4C9288D216C7D4B00D0441D /* Build configuration list for PBXNativeTarget "STKit" */;
+			buildConfigurationList = D4C9288D216C7D4B00D0441D /* Build configuration list for PBXNativeTarget "ShuTu" */;
 			buildPhases = (
 				D4C92880216C7D4B00D0441D /* Headers */,
 				D4C92881216C7D4B00D0441D /* Sources */,
@@ -114,9 +114,9 @@
 			);
 			dependencies = (
 			);
-			name = STKit;
+			name = ShuTu;
 			productName = STKit;
-			productReference = D4C92885216C7D4B00D0441D /* STKit.framework */;
+			productReference = D4C92885216C7D4B00D0441D /* ShuTu.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -134,7 +134,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D4C9287F216C7D4B00D0441D /* Build configuration list for PBXProject "STKit" */;
+			buildConfigurationList = D4C9287F216C7D4B00D0441D /* Build configuration list for PBXProject "ShuTu" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -146,7 +146,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D4C92884216C7D4B00D0441D /* STKit */,
+				D4C92884216C7D4B00D0441D /* ShuTu */,
 			);
 		};
 /* End PBXProject section */
@@ -361,7 +361,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D4C9287F216C7D4B00D0441D /* Build configuration list for PBXProject "STKit" */ = {
+		D4C9287F216C7D4B00D0441D /* Build configuration list for PBXProject "ShuTu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C9288B216C7D4B00D0441D /* Debug */,
@@ -370,7 +370,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D4C9288D216C7D4B00D0441D /* Build configuration list for PBXNativeTarget "STKit" */ = {
+		D4C9288D216C7D4B00D0441D /* Build configuration list for PBXNativeTarget "ShuTu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D4C9288E216C7D4B00D0441D /* Debug */,
