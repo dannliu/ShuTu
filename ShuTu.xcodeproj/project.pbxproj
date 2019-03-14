@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1D6141CB10F633B39F1A442 /* Pods_ShuTu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25CC98BEED6500CC41FC8EDC /* Pods_ShuTu.framework */; };
+		D4414321223A64CC0013A423 /* ShuTu.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D4414320223A64CC0013A423 /* ShuTu.podspec */; };
+		D4414323223A65410013A423 /* STToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4414322223A65410013A423 /* STToast.swift */; };
 		D46E4C262223730F00109A5B /* STSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E4C252223730F00109A5B /* STSearchBarViewController.swift */; };
 		D4C9288A216C7D4B00D0441D /* STKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C92888216C7D4B00D0441D /* STKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C92892216C7D6700D0441D /* STExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C92891216C7D6700D0441D /* STExtensions.swift */; };
@@ -20,6 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0017E64077D6DBFA28DEB72E /* Pods-ShuTu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuTu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShuTu/Pods-ShuTu.debug.xcconfig"; sourceTree = "<group>"; };
+		199060A9F63C2BEA069837B7 /* Pods-ShuTu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuTu.release.xcconfig"; path = "Pods/Target Support Files/Pods-ShuTu/Pods-ShuTu.release.xcconfig"; sourceTree = "<group>"; };
+		25CC98BEED6500CC41FC8EDC /* Pods_ShuTu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShuTu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4414320223A64CC0013A423 /* ShuTu.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShuTu.podspec; sourceTree = "<group>"; };
+		D4414322223A65410013A423 /* STToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STToast.swift; sourceTree = "<group>"; };
 		D46E4C252223730F00109A5B /* STSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STSearchBarViewController.swift; sourceTree = "<group>"; };
 		D4C92885216C7D4B00D0441D /* ShuTu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShuTu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C92888216C7D4B00D0441D /* STKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKit.h; sourceTree = "<group>"; };
@@ -39,18 +47,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1D6141CB10F633B39F1A442 /* Pods_ShuTu.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0018EAD7EB78B54F27CDA84F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25CC98BEED6500CC41FC8EDC /* Pods_ShuTu.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5DF28DC7C693128D9F041814 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0017E64077D6DBFA28DEB72E /* Pods-ShuTu.debug.xcconfig */,
+				199060A9F63C2BEA069837B7 /* Pods-ShuTu.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D4C9287B216C7D4B00D0441D = {
 			isa = PBXGroup;
 			children = (
+				D4414320223A64CC0013A423 /* ShuTu.podspec */,
 				D4C92890216C7D5400D0441D /* Source */,
 				D4C92889216C7D4B00D0441D /* Info.plist */,
 				D4C92886216C7D4B00D0441D /* Products */,
+				5DF28DC7C693128D9F041814 /* Pods */,
+				0018EAD7EB78B54F27CDA84F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +99,7 @@
 				D4C928A9216C899200D0441D /* STSize.swift */,
 				D4C928B0216C976A00D0441D /* STScrollView.swift */,
 				D4C92891216C7D6700D0441D /* STExtensions.swift */,
+				D4414322223A65410013A423 /* STToast.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -105,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D4C9288D216C7D4B00D0441D /* Build configuration list for PBXNativeTarget "ShuTu" */;
 			buildPhases = (
+				722027ECCD89B5BE768B3B8D /* [CP] Check Pods Manifest.lock */,
 				D4C92880216C7D4B00D0441D /* Headers */,
 				D4C92881216C7D4B00D0441D /* Sources */,
 				D4C92882216C7D4B00D0441D /* Frameworks */,
@@ -156,16 +187,39 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4414321223A64CC0013A423 /* ShuTu.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		722027ECCD89B5BE768B3B8D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShuTu-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D4C92881216C7D4B00D0441D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D4414323223A65410013A423 /* STToast.swift in Sources */,
 				D4C928A7216C850E00D0441D /* STLoadingControl.swift in Sources */,
 				D4C928B1216C976A00D0441D /* STScrollView.swift in Sources */,
 				D4C928AA216C899200D0441D /* STSize.swift in Sources */,
@@ -305,6 +359,7 @@
 		};
 		D4C9288E216C7D4B00D0441D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0017E64077D6DBFA28DEB72E /* Pods-ShuTu.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -333,6 +388,7 @@
 		};
 		D4C9288F216C7D4B00D0441D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 199060A9F63C2BEA069837B7 /* Pods-ShuTu.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
