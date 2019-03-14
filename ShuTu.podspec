@@ -9,5 +9,5 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/x4snowman/ShuTu.git", :tag => s.version }
   s.source_files = "Source/*.swift"
   s.swift_version = '4.2'
-  s.framework = 'MBProgressHUD'
+  s.dependency  'MBProgressHUD'
 end

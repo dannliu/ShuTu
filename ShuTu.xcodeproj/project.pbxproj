@@ -94,7 +94,12 @@
 		D4C92890216C7D5400D0441D /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D4C928A8216C86AD00D0441D /* TableView */,
+				D4C928AB216C89BC00D0441D /* STBaseCell.swift */,
+				D4C928A6216C850E00D0441D /* STLoadingControl.swift */,
+				D4C928A4216C844500D0441D /* STTableSectionHeaderView.swift */,
+				D4C928A0216C83EA00D0441D /* STGroupedTableViewController.swift */,
+				D4C9289C216C834B00D0441D /* STBaseTableViewController.swift */,
+				D46E4C252223730F00109A5B /* STSearchBarViewController.swift */,
 				D4C92888216C7D4B00D0441D /* STKit.h */,
 				D4C928A9216C899200D0441D /* STSize.swift */,
 				D4C928B0216C976A00D0441D /* STScrollView.swift */,
@@ -102,19 +107,6 @@
 				D4414322223A65410013A423 /* STToast.swift */,
 			);
 			path = Source;
-			sourceTree = "<group>";
-		};
-		D4C928A8216C86AD00D0441D /* TableView */ = {
-			isa = PBXGroup;
-			children = (
-				D4C928AB216C89BC00D0441D /* STBaseCell.swift */,
-				D4C928A6216C850E00D0441D /* STLoadingControl.swift */,
-				D4C928A4216C844500D0441D /* STTableSectionHeaderView.swift */,
-				D4C928A0216C83EA00D0441D /* STGroupedTableViewController.swift */,
-				D4C9289C216C834B00D0441D /* STBaseTableViewController.swift */,
-				D46E4C252223730F00109A5B /* STSearchBarViewController.swift */,
-			);
-			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
