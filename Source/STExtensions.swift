@@ -12,7 +12,7 @@ import Foundation
 // MARK: - UITableView
 
 protocol STCellProtocol: AnyObject {
-    static var reuseid: String {get}
+    static var reuseid: String { get }
 }
 
 extension UITableView {
@@ -29,12 +29,6 @@ extension UITableView {
 extension UITableViewCell: STCellProtocol {
     class var reuseid: String {
         return NSStringFromClass(self)
-    }
-}
-
-extension UITableView {
-    public func reloadRow(section: Int, row: Int, animation: UITableView.RowAnimation) {
-        reloadRows(at: [IndexPath(row: row, section: section)], with: animation)
     }
 }
 

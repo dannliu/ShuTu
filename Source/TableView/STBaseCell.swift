@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum CellLineSeparatorStyle: Int {
+public enum STCellLineSeparatorStyle: Int {
     case none   = 0x00
     case top    = 0x01
     case bottom = 0x10
@@ -44,20 +44,24 @@ open class STBaseCell: UITableViewCell {
         return v
     }
     
-    public func setLineSeparatorStyle(_ style: CellLineSeparatorStyle) {
+    public func setLineSeparatorStyle(_ style: STCellLineSeparatorStyle) {
         switch style {
         case .none:
             topLineSeparator?.isHidden = true
             bottomLineSeparator?.isHidden = true
         case .top:
             addTopLineSeparator()
+            topLineSeparator?.isHidden = false
             bottomLineSeparator?.isHidden = true
         case .bottom:
             addBottomLineSeparator()
             topLineSeparator?.isHidden = true
+            bottomLineSeparator?.isHidden = false
         case .both:
             addTopLineSeparator()
             addBottomLineSeparator()
+            topLineSeparator?.isHidden = false
+            bottomLineSeparator?.isHidden = false
         }
     }
     
@@ -78,36 +82,30 @@ open class STBaseCell: UITableViewCell {
             topLineSeparator = makeLineSeparator()
             topLineSeparator?.translatesAutoresizingMaskIntoConstraints = false
             self.addSubview(topLineSeparator!)
-            if let sv = topLineSeparator!.superview {
-                topLeadingConstraint = topLineSeparator?.leadingTo(sv, offset: STSize.Margin.m16)
-                topTrailingConstraint = sv.trailingTo(topLineSeparator!)
-                NSLayoutConstraint.activate([
-                    topLineSeparator!.heightAs(STSize.unit),
-                    topLineSeparator!.topTo(sv),
-                    topLeadingConstraint!,
-                    topTrailingConstraint!
-                ])
-            }
+            topLeadingConstraint = topLineSeparator?.leadingTo(self, offset: STSize.Margin.m16)
+            topTrailingConstraint = trailingTo(topLineSeparator!)
+            NSLayoutConstraint.activate(
+                topLineSeparator!.heightAs(STSize.unit),
+                topLineSeparator!.topTo(self),
+                topLeadingConstraint!,
+                topTrailingConstraint!
+            )
         }
-        topLineSeparator?.isHidden = false
     }
     
     private func addBottomLineSeparator() {
         if bottomLineSeparator == nil {
             bottomLineSeparator = makeLineSeparator()
             bottomLineSeparator?.translatesAutoresizingMaskIntoConstraints = false
-            self.addSubview(bottomLineSeparator!)
-            if let sv = bottomLineSeparator!.superview {
-                bottomLeadingConstraint = bottomLineSeparator?.leadingTo(sv, offset: STSize.Margin.m16)
-                bottomTrailingConstraint = sv.trailingTo(bottomLineSeparator!)
-                NSLayoutConstraint.activate([
-                    bottomLineSeparator!.heightAs(STSize.unit),
-                    bottomLineSeparator!.bottomTo(sv),
-                    bottomLeadingConstraint!,
-                    bottomTrailingConstraint!
-                ])
-            }
+            addSubview(bottomLineSeparator!)
+            bottomLeadingConstraint = bottomLineSeparator?.leadingTo(self, offset: STSize.Margin.m16)
+            bottomTrailingConstraint = trailingTo(bottomLineSeparator!)
+            NSLayoutConstraint.activate(
+                bottomLineSeparator!.heightAs(STSize.unit),
+                bottomLineSeparator!.bottomTo(self),
+                bottomLeadingConstraint!,
+                bottomTrailingConstraint!
+            )
         }
-        bottomLineSeparator?.isHidden = false
     }
 }
