@@ -1,0 +1,477 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4D8948C223BA51D001A1C69 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D8948B223BA51D001A1C69 /* AppDelegate.swift */; };
+		D4D8948E223BA51D001A1C69 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D8948D223BA51D001A1C69 /* ViewController.swift */; };
+		D4D89491223BA51D001A1C69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D8948F223BA51D001A1C69 /* Main.storyboard */; };
+		D4D89493223BA51F001A1C69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D89492223BA51F001A1C69 /* Assets.xcassets */; };
+		D4D89496223BA51F001A1C69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D89494223BA51F001A1C69 /* LaunchScreen.storyboard */; };
+		D4D894B3223BA6D5001A1C69 /* STBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894A8223BA6D5001A1C69 /* STBaseCell.swift */; };
+		D4D894B4223BA6D5001A1C69 /* STLoadingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894A9223BA6D5001A1C69 /* STLoadingControl.swift */; };
+		D4D894B5223BA6D5001A1C69 /* STGroupedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894AA223BA6D5001A1C69 /* STGroupedTableViewController.swift */; };
+		D4D894B6223BA6D5001A1C69 /* STTableSectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894AC223BA6D5001A1C69 /* STTableSectionHeaderView.swift */; };
+		D4D894B7223BA6D5001A1C69 /* STExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894AD223BA6D5001A1C69 /* STExtensions.swift */; };
+		D4D894B8223BA6D5001A1C69 /* STBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894AE223BA6D5001A1C69 /* STBaseTableViewController.swift */; };
+		D4D894B9223BA6D5001A1C69 /* STScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894AF223BA6D5001A1C69 /* STScrollView.swift */; };
+		D4D894BA223BA6D5001A1C69 /* STToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894B0223BA6D5001A1C69 /* STToast.swift */; };
+		D4D894BB223BA6D5001A1C69 /* STSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894B1223BA6D5001A1C69 /* STSize.swift */; };
+		D4D894BC223BA6D5001A1C69 /* STSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4D894B2223BA6D5001A1C69 /* STSearchBarViewController.swift */; };
+		F8A38A382CEC23D0BFA14F38 /* Pods_ShuTu_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5BF7E582B607B5396AC636C /* Pods_ShuTu_Test.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D4D894A6223BA590001A1C69 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1B84D81FD6E1769C7CC73774 /* Pods-ShuTu-Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuTu-Test.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-ShuTu-Test/Pods-ShuTu-Test.debug.xcconfig"; sourceTree = "<group>"; };
+		516E2B3C796148AE403D6E4A /* Pods-ShuTu-Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShuTu-Test.release.xcconfig"; path = "../Pods/Target Support Files/Pods-ShuTu-Test/Pods-ShuTu-Test.release.xcconfig"; sourceTree = "<group>"; };
+		B5BF7E582B607B5396AC636C /* Pods_ShuTu_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShuTu_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D89488223BA51D001A1C69 /* ShuTu-Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ShuTu-Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4D8948B223BA51D001A1C69 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4D8948D223BA51D001A1C69 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4D89490223BA51D001A1C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4D89492223BA51F001A1C69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4D89495223BA51F001A1C69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4D89497223BA51F001A1C69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4D894A8223BA6D5001A1C69 /* STBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STBaseCell.swift; sourceTree = "<group>"; };
+		D4D894A9223BA6D5001A1C69 /* STLoadingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STLoadingControl.swift; sourceTree = "<group>"; };
+		D4D894AA223BA6D5001A1C69 /* STGroupedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STGroupedTableViewController.swift; sourceTree = "<group>"; };
+		D4D894AB223BA6D5001A1C69 /* STKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STKit.h; sourceTree = "<group>"; };
+		D4D894AC223BA6D5001A1C69 /* STTableSectionHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STTableSectionHeaderView.swift; sourceTree = "<group>"; };
+		D4D894AD223BA6D5001A1C69 /* STExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STExtensions.swift; sourceTree = "<group>"; };
+		D4D894AE223BA6D5001A1C69 /* STBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STBaseTableViewController.swift; sourceTree = "<group>"; };
+		D4D894AF223BA6D5001A1C69 /* STScrollView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STScrollView.swift; sourceTree = "<group>"; };
+		D4D894B0223BA6D5001A1C69 /* STToast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STToast.swift; sourceTree = "<group>"; };
+		D4D894B1223BA6D5001A1C69 /* STSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSize.swift; sourceTree = "<group>"; };
+		D4D894B2223BA6D5001A1C69 /* STSearchBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STSearchBarViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4D89485223BA51D001A1C69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8A38A382CEC23D0BFA14F38 /* Pods_ShuTu_Test.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B0E75D8CFD695A3470563939 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B5BF7E582B607B5396AC636C /* Pods_ShuTu_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D4D8947F223BA51D001A1C69 = {
+			isa = PBXGroup;
+			children = (
+				D4D8948A223BA51D001A1C69 /* ShuTu-Test */,
+				D4D89489223BA51D001A1C69 /* Products */,
+				F0ECF3BCD6F6AC8B28EC7619 /* Pods */,
+				B0E75D8CFD695A3470563939 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D4D89489223BA51D001A1C69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4D89488223BA51D001A1C69 /* ShuTu-Test.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4D8948A223BA51D001A1C69 /* ShuTu-Test */ = {
+			isa = PBXGroup;
+			children = (
+				D4D894A7223BA6D5001A1C69 /* Source */,
+				D4D8948B223BA51D001A1C69 /* AppDelegate.swift */,
+				D4D8948D223BA51D001A1C69 /* ViewController.swift */,
+				D4D8948F223BA51D001A1C69 /* Main.storyboard */,
+				D4D89492223BA51F001A1C69 /* Assets.xcassets */,
+				D4D89494223BA51F001A1C69 /* LaunchScreen.storyboard */,
+				D4D89497223BA51F001A1C69 /* Info.plist */,
+			);
+			path = "ShuTu-Test";
+			sourceTree = "<group>";
+		};
+		D4D894A7223BA6D5001A1C69 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				D4D894A8223BA6D5001A1C69 /* STBaseCell.swift */,
+				D4D894A9223BA6D5001A1C69 /* STLoadingControl.swift */,
+				D4D894AA223BA6D5001A1C69 /* STGroupedTableViewController.swift */,
+				D4D894AB223BA6D5001A1C69 /* STKit.h */,
+				D4D894AC223BA6D5001A1C69 /* STTableSectionHeaderView.swift */,
+				D4D894AD223BA6D5001A1C69 /* STExtensions.swift */,
+				D4D894AE223BA6D5001A1C69 /* STBaseTableViewController.swift */,
+				D4D894AF223BA6D5001A1C69 /* STScrollView.swift */,
+				D4D894B0223BA6D5001A1C69 /* STToast.swift */,
+				D4D894B1223BA6D5001A1C69 /* STSize.swift */,
+				D4D894B2223BA6D5001A1C69 /* STSearchBarViewController.swift */,
+			);
+			name = Source;
+			path = ../../Source;
+			sourceTree = "<group>";
+		};
+		F0ECF3BCD6F6AC8B28EC7619 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B84D81FD6E1769C7CC73774 /* Pods-ShuTu-Test.debug.xcconfig */,
+				516E2B3C796148AE403D6E4A /* Pods-ShuTu-Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4D89487223BA51D001A1C69 /* ShuTu-Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4D8949A223BA51F001A1C69 /* Build configuration list for PBXNativeTarget "ShuTu-Test" */;
+			buildPhases = (
+				04469C5DC73151D93EFF6F88 /* [CP] Check Pods Manifest.lock */,
+				D4D89484223BA51D001A1C69 /* Sources */,
+				D4D89485223BA51D001A1C69 /* Frameworks */,
+				D4D89486223BA51D001A1C69 /* Resources */,
+				D4D894A6223BA590001A1C69 /* Embed Frameworks */,
+				4A6F194B217B0BCD075EEB1A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ShuTu-Test";
+			productName = "ShuTu-Test";
+			productReference = D4D89488223BA51D001A1C69 /* ShuTu-Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4D89480223BA51D001A1C69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = liudanyun.com;
+				TargetAttributes = {
+					D4D89487223BA51D001A1C69 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = D4D89483223BA51D001A1C69 /* Build configuration list for PBXProject "ShuTu-Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4D8947F223BA51D001A1C69;
+			productRefGroup = D4D89489223BA51D001A1C69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4D89487223BA51D001A1C69 /* ShuTu-Test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4D89486223BA51D001A1C69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D89496223BA51F001A1C69 /* LaunchScreen.storyboard in Resources */,
+				D4D89493223BA51F001A1C69 /* Assets.xcassets in Resources */,
+				D4D89491223BA51D001A1C69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04469C5DC73151D93EFF6F88 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShuTu-Test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4A6F194B217B0BCD075EEB1A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/../Pods/Target Support Files/Pods-ShuTu-Test/Pods-ShuTu-Test-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-ShuTu-Test/Pods-ShuTu-Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4D89484223BA51D001A1C69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4D894BB223BA6D5001A1C69 /* STSize.swift in Sources */,
+				D4D894BA223BA6D5001A1C69 /* STToast.swift in Sources */,
+				D4D894B5223BA6D5001A1C69 /* STGroupedTableViewController.swift in Sources */,
+				D4D894BC223BA6D5001A1C69 /* STSearchBarViewController.swift in Sources */,
+				D4D894B9223BA6D5001A1C69 /* STScrollView.swift in Sources */,
+				D4D8948E223BA51D001A1C69 /* ViewController.swift in Sources */,
+				D4D894B7223BA6D5001A1C69 /* STExtensions.swift in Sources */,
+				D4D894B8223BA6D5001A1C69 /* STBaseTableViewController.swift in Sources */,
+				D4D8948C223BA51D001A1C69 /* AppDelegate.swift in Sources */,
+				D4D894B3223BA6D5001A1C69 /* STBaseCell.swift in Sources */,
+				D4D894B4223BA6D5001A1C69 /* STLoadingControl.swift in Sources */,
+				D4D894B6223BA6D5001A1C69 /* STTableSectionHeaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D4D8948F223BA51D001A1C69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4D89490223BA51D001A1C69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4D89494223BA51F001A1C69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4D89495223BA51F001A1C69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4D89498223BA51F001A1C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4D89499223BA51F001A1C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4D8949B223BA51F001A1C69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B84D81FD6E1769C7CC73774 /* Pods-ShuTu-Test.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RX632A7N8;
+				INFOPLIST_FILE = "ShuTu-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liudanyun.ShuTu-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4D8949C223BA51F001A1C69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 516E2B3C796148AE403D6E4A /* Pods-ShuTu-Test.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7RX632A7N8;
+				INFOPLIST_FILE = "ShuTu-Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.liudanyun.ShuTu-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4D89483223BA51D001A1C69 /* Build configuration list for PBXProject "ShuTu-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D89498223BA51F001A1C69 /* Debug */,
+				D4D89499223BA51F001A1C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4D8949A223BA51F001A1C69 /* Build configuration list for PBXNativeTarget "ShuTu-Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4D8949B223BA51F001A1C69 /* Debug */,
+				D4D8949C223BA51F001A1C69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4D89480223BA51D001A1C69 /* Project object */;
+}

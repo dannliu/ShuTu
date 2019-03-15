@@ -244,6 +244,12 @@ extension TimeZone {
 
 extension TimeInterval {
     
+    /// Transform time interval to date string
+    ///
+    /// If the date is in current year, only show month and day (`MM-dd HH:mm`)
+    /// else plus the year information (`yyyy-MM-dd HH:mm`)
+    ///
+    /// - Returns: date string
     public func toDateStr() -> String {
         let date = Date(timeIntervalSince1970: self)
         var calendar = Calendar(identifier: .gregorian)

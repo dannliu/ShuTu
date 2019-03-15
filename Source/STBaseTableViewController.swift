@@ -37,12 +37,11 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
             tableViewTopLayoutGuide.leadingTo(view),
             tableViewTopLayoutGuide.trailingTo(view)
         )
-        //To fix padding when use grouped table view controller
-        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
-        tableView.tableFooterView = UIView()
+
         tableView.separatorStyle = .none
         tableView.backgroundColor = UIColor.System.TableView.background
-        tableView.estimatedRowHeight = UITableView.automaticDimension
+        /// Must be set explictly under iOS 10
+        tableView.estimatedRowHeight = 44.0
         tableView.rowHeight = UITableView.automaticDimension
         tableView.delegate = self
         tableView.dataSource = self
@@ -53,6 +52,9 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
             tableView.leadingTo(view),
             tableView.trailingTo(view)
         )
+        //To fix padding when use grouped table view controller
+        tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
+        tableView.tableFooterView = UIView()
     }
     
     override open func viewWillLayoutSubviews() {
@@ -94,7 +96,8 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
     }
     
     open func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0.0
+        /// Under iOS 10, return 0 for grouped table view is not working
+        return CGFloat.leastNormalMagnitude
     }
     
     open func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -102,7 +105,8 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
     }
     
     open func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.0
+        /// Under iOS 10, return 0 for grouped table view is not working
+        return CGFloat.leastNormalMagnitude
     }
     
     open func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {

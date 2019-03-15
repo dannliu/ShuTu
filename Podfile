@@ -12,3 +12,9 @@ target "ShuTu" do
   pod 'MBProgressHUD'
   pod 'Alamofire'
 end
+
+target "ShuTu-Test" do
+	project 'ShuTu-Test/ShuTu-Test.xcodeproj'
+	pod 'MBProgressHUD'
+ 	pod 'Alamofire'
+end

@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:ShuTu-Test/ShuTu-Test.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:ShuTu.xcodeproj">
    </FileRef>
    <FileRef
