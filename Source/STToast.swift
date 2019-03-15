@@ -17,7 +17,6 @@ public class STToast {
         return window
     }()
     
-    
     public static func show(text: String?) {
         show(text:text, duration: 1.5, completion:nil)
     }

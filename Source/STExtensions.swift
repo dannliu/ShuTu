@@ -220,3 +220,39 @@ extension Data {
         return reduce("") {$0 + String(format: "%02x", $1)}
     }
 }
+
+extension Int {
+    public func abbreviation() -> String {
+        switch self {
+        case ..<1000:
+            return "\(self)"
+        case 1000..<1000000:
+            return String(format: "%.2fK", Float(self) / 1000.0)
+        case 1000000...:
+            return String(format: "%.2fM", Float(self) / 1000000.0)
+        default:
+            return "\(self)"
+        }
+    }
+}
+
+extension TimeZone {
+    
+    /// China time zone
+    public static let China = TimeZone(identifier: "Asia/Shanghai")!
+}
+
+extension TimeInterval {
+    
+    public func toDateStr() -> String {
+        let date = Date(timeIntervalSince1970: self)
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone.China
+        let year = calendar.component(.year, from: date)
+        let currentYear = calendar.component(.year, from: Date())
+        let formatter = DateFormatter()
+        formatter.dateFormat = (year == currentYear) ? "MM-dd HH:mm" : "yyyy-MM-dd HH:mm"
+        formatter.timeZone = TimeZone.China
+        return formatter.string(from: date)
+    }
+}
