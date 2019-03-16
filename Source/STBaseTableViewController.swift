@@ -14,6 +14,8 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
     
     public var topContentLayoutGuide: UILayoutGuide = UILayoutGuide()
     
+    public var clearsSelectionOnViewWillAppear: Bool = false
+    
     private var tableViewStyle: UITableView.Style!
     
     public init(style: UITableView.Style = .plain) {
@@ -56,46 +58,28 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
         //To fix padding when use grouped table view controller
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
         tableView.tableFooterView = UIView()
-        if #available(iOS 11.0, *) {
-            tableView.contentInsetAdjustmentBehavior = .never
+        if hasTopContent {
+            topContentLayoutGuide.safeTopTo(view).isActive = true
         } else {
-            automaticallyAdjustsScrollViewInsets = false
+            topContentLayoutGuide.topTo(view).isActive = true
         }
+        tableView.bottomTo(view).isActive = true
     }
     
     
     /// If we need put a custom view on the table view, set this property as true
     ///
     /// User topContentLayoutGuide to layout the custom view
-    var hasTopContent: Bool = false
-    
-    override open func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        var top: CGFloat = 0.0
-        var bottom: CGFloat = 0.0
-        if hasTopContent {
-            topContentLayoutGuide.safeTopTo(view).isActive = true
-        }  else {
-            topContentLayoutGuide.topTo(view).isActive = true
-            if #available(iOS 11.0, *) {
-                top = view.safeAreaInsets.top
-            } else {
-                top = topLayoutGuide.length
-            }
-        }
-        if #available(iOS 11.0, *) {
-            bottom = view.safeAreaInsets.bottom
-        } else {
-            bottom = bottomLayoutGuide.length
-        }
-        tableView.bottomTo(view).isActive = true
-        tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
+    var hasTopContent: Bool {
+        return false
     }
     
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        tableView.indexPathsForSelectedRows?.forEach {
-            self.tableView.deselectRow(at: $0, animated: true)
+        if clearsSelectionOnViewWillAppear {
+            tableView.indexPathsForSelectedRows?.forEach {
+                self.tableView.deselectRow(at: $0, animated: true)
+            }
         }
     }
     

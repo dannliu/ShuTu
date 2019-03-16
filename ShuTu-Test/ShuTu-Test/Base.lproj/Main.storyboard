@@ -14,7 +14,7 @@
         <scene sceneID="QOM-Ak-4ue">
             <objects>
                 <tabBarController id="jbW-Gt-RQW" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FSQ-fe-ejn">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="FSQ-fe-ejn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -50,15 +50,20 @@
             <objects>
                 <viewController id="cOY-61-6N3" customClass="ViewController" customModule="ShuTu_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pne-ad-Fu2">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="iko-8L-hyf"/>
                     </view>
                     <navigationItem key="navigationItem" id="LEA-M5-wGd">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="nBQ-kC-4vJ">
+                            <connections>
+                                <action selector="changeTranslucent" destination="cOY-61-6N3" id="2Nh-vS-V7P"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" id="sKP-cT-YBm">
                             <connections>
-                                <action selector="changeTranslucent" destination="cOY-61-6N3" id="Qgm-di-CTu"/>
+                                <segue destination="pA4-pO-NgB" kind="show" id="JQF-QI-uXT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -72,7 +77,7 @@
             <objects>
                 <tableViewController id="Wqb-oB-2IO" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="IBF-wQ-6S0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>

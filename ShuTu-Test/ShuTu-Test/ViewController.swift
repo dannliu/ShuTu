@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: STBaseTableViewController {
+class ViewController: STSearchBarViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,6 @@ class ViewController: STBaseTableViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
     }
     
     @objc
@@ -37,12 +36,12 @@ class ViewController: STBaseTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        return 30
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = STBaseCell()
-        cell.textLabel?.text = "Test"
+        cell.textLabel?.text = "Test - \(indexPath.row)"
         cell.backgroundColor = UIColor.red
         return cell
     }
@@ -52,8 +51,9 @@ class ViewController: STBaseTableViewController {
     }
     
     @IBAction func changeTranslucent() {
-//        navigationController?.navigationBar.isTranslucent = !(navigationController?.navigationBar.isTranslucent ?? false)
-        becomeFirstResponder()
+        navigationController?.navigationBar.isTranslucent = !(navigationController?.navigationBar.isTranslucent ?? false)
+        tabBarController?.tabBar.isTranslucent = !(tabBarController?.tabBar.isTranslucent ?? false)
+//        becomeFirstResponder()
     }
     
     override var canBecomeFirstResponder: Bool {

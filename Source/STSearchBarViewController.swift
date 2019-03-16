@@ -25,4 +25,8 @@ open class STSearchBarViewController: STBaseTableViewController {
             searchBar.innerTo(topContentLayoutGuide)
         )        
     }
+    
+    override var hasTopContent: Bool {
+        return true
+    }
 }

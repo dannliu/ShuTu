@@ -116,15 +116,7 @@ extension STLayoutAnchor {
     }
     
     public func safeTopTo(_ view: UIView, offset: CGFloat = 0) -> NSLayoutConstraint {
-        if #available(iOS 11, *) {
-            return topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: offset)
-        } else {
-            if let vc = view.nearesetViewController() {
-                return topAnchor.constraint(equalTo: vc.topLayoutGuide.bottomAnchor, constant: offset)
-            } else {
-                return topAnchor.constraint(equalTo: view.topAnchor, constant: offset)
-            }
-        }
+        return topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: offset)
     }
     
     public func bottomTo(_ view: STLayoutAnchor, offset: CGFloat = 0) -> NSLayoutConstraint {
@@ -132,15 +124,7 @@ extension STLayoutAnchor {
     }
     
     public func safeBottomTo(_ view: UIView, offset: CGFloat = 0) -> NSLayoutConstraint {
-        if #available(iOS 11, *) {
-            return bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -offset)
-        } else {
-            if let vc = view.nearesetViewController() {
-                return bottomAnchor.constraint(equalTo: vc.bottomLayoutGuide.topAnchor, constant: -offset)
-            } else {
-                return bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -offset)
-            }
-        }
+        return bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -offset)
     }
     
     public func vNextTo(_ view: STLayoutAnchor, offset: CGFloat = 0) -> NSLayoutConstraint {
