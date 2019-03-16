@@ -163,7 +163,7 @@ public class STTableView: UITableView {
                 !lc.loading
                 && lc.hasMoreData
                 && contentSize.height > frame.height
-                && contentOffset.y + frame.height > contentSize.height + STLoadingControl.height {
+                && contentOffset.y + frame.height - adjustedContentInset.bottom > contentSize.height + STLoadingControl.height {
                 lc.beginLoading()
                 tableFooterView = loadingControl
                 DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
