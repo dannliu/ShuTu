@@ -22,7 +22,7 @@ open class STSearchBarViewController: STBaseTableViewController {
         view.addSubview(searchBar)
         searchBar.makeOnlyAutoLayout()
         NSLayoutConstraint.activate(
-            searchBar.innerTo(tableViewTopLayoutGuide)
+            searchBar.innerTo(topContentLayoutGuide)
         )        
     }
 }

@@ -12,10 +12,6 @@ class ViewController: STBaseTableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tableView.loadingControl = STLoadingControl()
-//        tableView.loadingControl?.addTarget(self, action: #selector(load), for: .valueChanged)
-        
-        // Do any additional setup after loading the view, typically from a nib.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +49,15 @@ class ViewController: STBaseTableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     
+    }
+    
+    @IBAction func changeTranslucent() {
+//        navigationController?.navigationBar.isTranslucent = !(navigationController?.navigationBar.isTranslucent ?? false)
+        becomeFirstResponder()
+    }
+    
+    override var canBecomeFirstResponder: Bool {
+        return true
     }
 }
 

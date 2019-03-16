@@ -67,6 +67,20 @@ extension UIView {
     public func makeOnlyAutoLayout() {
         translatesAutoresizingMaskIntoConstraints = false
     }
+    
+    /// Find view's view controller
+    ///
+    /// - Returns: `UIViewController`
+    func nearesetViewController() -> UIViewController? {
+        var next = self.next
+        while next != nil {
+            if next is UIViewController {
+                return next as? UIViewController
+            }
+            next = next?.next
+        }
+        return nil
+    }
 }
 
 
@@ -105,7 +119,11 @@ extension STLayoutAnchor {
         if #available(iOS 11, *) {
             return topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: offset)
         } else {
-            return topAnchor.constraint(equalTo: view.topAnchor, constant: offset)
+            if let vc = view.nearesetViewController() {
+                return topAnchor.constraint(equalTo: vc.topLayoutGuide.bottomAnchor, constant: offset)
+            } else {
+                return topAnchor.constraint(equalTo: view.topAnchor, constant: offset)
+            }
         }
     }
     
@@ -117,7 +135,11 @@ extension STLayoutAnchor {
         if #available(iOS 11, *) {
             return bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -offset)
         } else {
-            return bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -offset)
+            if let vc = view.nearesetViewController() {
+                return bottomAnchor.constraint(equalTo: vc.bottomLayoutGuide.topAnchor, constant: -offset)
+            } else {
+                return bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -offset)
+            }
         }
     }
     
@@ -260,5 +282,16 @@ extension TimeInterval {
         formatter.dateFormat = (year == currentYear) ? "MM-dd HH:mm" : "yyyy-MM-dd HH:mm"
         formatter.timeZone = TimeZone.China
         return formatter.string(from: date)
+    }
+}
+
+extension UIEdgeInsets {
+    
+    public static func + (l: UIEdgeInsets, r: UIEdgeInsets) ->  UIEdgeInsets {
+        return UIEdgeInsets(top: l.top + r.top, left: l.left + r.left, bottom: l.bottom + r.bottom, right: l.right + r.right)
+    }
+    
+    public static func - (l: UIEdgeInsets, r: UIEdgeInsets) -> UIEdgeInsets {
+        return UIEdgeInsets(top: l.top - r.top, left: l.left - r.left, bottom: l.bottom - r.bottom, right: l.right - r.right)
     }
 }

@@ -10,6 +10,9 @@ import UIKit
 
 public class STScrollView: UIScrollView {
     
+    var contentInsetsBeforeKeyboardShow: UIEdgeInsets = UIEdgeInsets.zero
+    var scrollIndicatorInsetsBeforeKeyboardShow: UIEdgeInsets = UIEdgeInsets.zero
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupKeyboard()
@@ -36,15 +39,17 @@ public class STScrollView: UIScrollView {
     }
     
     @objc private func keyboardWasShown(_ notification: Notification) {
+        contentInsetsBeforeKeyboardShow = contentInset
+        scrollIndicatorInsetsBeforeKeyboardShow = scrollIndicatorInsets
         if let rect: CGRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             let inset = UIEdgeInsets(top: 0, left: 0, bottom: rect.height, right: 0)
-            contentInset = inset
-            scrollIndicatorInsets = inset
+            contentInset = inset + contentInsetsBeforeKeyboardShow
+            scrollIndicatorInsets = inset + scrollIndicatorInsetsBeforeKeyboardShow
         }
     }
     
     @objc private func keyboardWillBeHidden(_ notification: Notification) {
-        contentInset = UIEdgeInsets.zero
-        scrollIndicatorInsets = UIEdgeInsets.zero
+        contentInset = contentInsetsBeforeKeyboardShow
+        scrollIndicatorInsets = scrollIndicatorInsetsBeforeKeyboardShow
     }
 }

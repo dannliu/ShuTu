@@ -12,7 +12,7 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
 
     public var tableView: STTableView!
     
-    public var tableViewTopLayoutGuide: UILayoutGuide = UILayoutGuide()
+    public var topContentLayoutGuide: UILayoutGuide = UILayoutGuide()
     
     private var tableViewStyle: UITableView.Style!
     
@@ -23,19 +23,20 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
     
     public required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        tableView = STTableView(frame: CGRect.zero, style: .plain)
     }
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.System.TableView.background
 
-        view.addLayoutGuide(tableViewTopLayoutGuide)
-        let lycsHeight = tableViewTopLayoutGuide.heightAs(0)
+        view.addLayoutGuide(topContentLayoutGuide)
+        let lycsHeight = topContentLayoutGuide.heightAs(0)
         lycsHeight.priority = .defaultLow
         NSLayoutConstraint.activate(
             lycsHeight,
-            tableViewTopLayoutGuide.leadingTo(view),
-            tableViewTopLayoutGuide.trailingTo(view)
+            topContentLayoutGuide.leadingTo(view),
+            topContentLayoutGuide.trailingTo(view)
         )
 
         tableView.separatorStyle = .none
@@ -48,28 +49,47 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
         view.addSubview(tableView)
         tableView.makeOnlyAutoLayout()
         NSLayoutConstraint.activate(
-            tableView.vNextTo(tableViewTopLayoutGuide),
+            tableView.vNextTo(topContentLayoutGuide),
             tableView.leadingTo(view),
             tableView.trailingTo(view)
         )
         //To fix padding when use grouped table view controller
         tableView.tableHeaderView = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: CGFloat.leastNormalMagnitude))
         tableView.tableFooterView = UIView()
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            automaticallyAdjustsScrollViewInsets = false
+        }
     }
     
-    override open func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        if let navigationBar = navigationController?.navigationBar, navigationBar.isTranslucent {
-            tableViewTopLayoutGuide.topTo(view).isActive = true
-        } else {
-            tableViewTopLayoutGuide.safeTopTo(view).isActive = true
+    
+    /// If we need put a custom view on the table view, set this property as true
+    ///
+    /// User topContentLayoutGuide to layout the custom view
+    var hasTopContent: Bool = false
+    
+    override open func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        var top: CGFloat = 0.0
+        var bottom: CGFloat = 0.0
+        if hasTopContent {
+            topContentLayoutGuide.safeTopTo(view).isActive = true
+        }  else {
+            topContentLayoutGuide.topTo(view).isActive = true
+            if #available(iOS 11.0, *) {
+                top = view.safeAreaInsets.top
+            } else {
+                top = topLayoutGuide.length
+            }
         }
-        
-        if hidesBottomBarWhenPushed {
-            tableView.bottomTo(view).isActive = true
+        if #available(iOS 11.0, *) {
+            bottom = view.safeAreaInsets.bottom
         } else {
-            tableView.safeBottomTo(view).isActive = true
+            bottom = bottomLayoutGuide.length
         }
+        tableView.bottomTo(view).isActive = true
+        tableView.contentInset = UIEdgeInsets(top: top, left: 0, bottom: bottom, right: 0)
     }
     
     override open func viewWillAppear(_ animated: Bool) {
@@ -131,6 +151,9 @@ open class STBaseTableViewController: UIViewController, UITableViewDataSource, U
 }
 
 public class STTableView: UITableView {
+    
+    var contentInsetsBeforeKeyboardShow: UIEdgeInsets = UIEdgeInsets.zero
+    var scrollIndicatorInsetsBeforeKeyboardShow: UIEdgeInsets = UIEdgeInsets.zero
     
     override public init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -202,13 +225,13 @@ public class STTableView: UITableView {
     @objc private func keyboardWasShown(_ notification: Notification) {
         if let rect: CGRect = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect {
             let inset = UIEdgeInsets(top: 0, left: 0, bottom: rect.height, right: 0)
-            contentInset = inset
-            scrollIndicatorInsets = inset
+            contentInset = inset + contentInsetsBeforeKeyboardShow
+            scrollIndicatorInsets = inset + scrollIndicatorInsetsBeforeKeyboardShow
         }
     }
     
     @objc private func keyboardWillBeHidden(_ notification: Notification) {
-        contentInset = UIEdgeInsets.zero
-        scrollIndicatorInsets = UIEdgeInsets.zero
+        contentInset = contentInsetsBeforeKeyboardShow
+        scrollIndicatorInsets = scrollIndicatorInsetsBeforeKeyboardShow
     }
 }
