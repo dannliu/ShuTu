@@ -11,6 +11,7 @@
 		D4414321223A64CC0013A423 /* ShuTu.podspec in Resources */ = {isa = PBXBuildFile; fileRef = D4414320223A64CC0013A423 /* ShuTu.podspec */; };
 		D4414323223A65410013A423 /* STToast.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4414322223A65410013A423 /* STToast.swift */; };
 		D46E4C262223730F00109A5B /* STSearchBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46E4C252223730F00109A5B /* STSearchBarViewController.swift */; };
+		D4A8C5B622428A4100F64C5D /* STIconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A8C5B522428A4100F64C5D /* STIconCell.swift */; };
 		D4C9288A216C7D4B00D0441D /* STKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C92888216C7D4B00D0441D /* STKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D4C92892216C7D6700D0441D /* STExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C92891216C7D6700D0441D /* STExtensions.swift */; };
 		D4C9289D216C834B00D0441D /* STBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4C9289C216C834B00D0441D /* STBaseTableViewController.swift */; };
@@ -29,6 +30,7 @@
 		D4414320223A64CC0013A423 /* ShuTu.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ShuTu.podspec; sourceTree = "<group>"; };
 		D4414322223A65410013A423 /* STToast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STToast.swift; sourceTree = "<group>"; };
 		D46E4C252223730F00109A5B /* STSearchBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = STSearchBarViewController.swift; sourceTree = "<group>"; };
+		D4A8C5B522428A4100F64C5D /* STIconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STIconCell.swift; sourceTree = "<group>"; };
 		D4C92885216C7D4B00D0441D /* ShuTu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ShuTu.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C92888216C7D4B00D0441D /* STKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STKit.h; sourceTree = "<group>"; };
 		D4C92889216C7D4B00D0441D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		D4C92890216C7D5400D0441D /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				D4A8C5B522428A4100F64C5D /* STIconCell.swift */,
 				D4C928AB216C89BC00D0441D /* STBaseCell.swift */,
 				D4C928A6216C850E00D0441D /* STLoadingControl.swift */,
 				D4C928A4216C844500D0441D /* STTableSectionHeaderView.swift */,
@@ -217,6 +220,7 @@
 				D4C928AA216C899200D0441D /* STSize.swift in Sources */,
 				D4C928A5216C844500D0441D /* STTableSectionHeaderView.swift in Sources */,
 				D4C9289D216C834B00D0441D /* STBaseTableViewController.swift in Sources */,
+				D4A8C5B622428A4100F64C5D /* STIconCell.swift in Sources */,
 				D4C92892216C7D6700D0441D /* STExtensions.swift in Sources */,
 				D4C928AC216C89BC00D0441D /* STBaseCell.swift in Sources */,
 				D4C928A1216C83EA00D0441D /* STGroupedTableViewController.swift in Sources */,
