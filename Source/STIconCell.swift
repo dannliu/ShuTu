@@ -8,13 +8,23 @@
 
 import UIKit
 
-class STIconCell: STBaseCell {
-    private let iconSize: CGFloat = 24.0
-    var stIconImageView: UIImageView!
-    var stTextLabel: UILabel!
+open class STIconCell: STBaseCell {
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+    private let iconSize: CGFloat = 24.0
+    public var stIconImageView: UIImageView!
+    public var stTextLabel: UILabel!
+    
+    public override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        initialize()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        initialize()
+    }
+    
+    private func initialize() {
         stIconImageView = UIImageView()
         stIconImageView.clipsToBounds = true
         stIconImageView.contentMode = .scaleToFill
@@ -36,9 +46,5 @@ class STIconCell: STBaseCell {
             stTextLabel.hNextTo(stIconImageView, offset: STSize.Margin.m16),
             stTextLabel.trailingTo(contentView, offset: STSize.Margin.m16)
         )
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
     }
 }
